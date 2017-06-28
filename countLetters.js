@@ -12,12 +12,14 @@
 function countLetters(sentence) {
   var sentence = sentence.toLowerCase().split(' ').join('');
   var answer = {};
+  var character = "";
 
   for(var i = 0; i < sentence.length; i++) {
-    if(!answer[sentence[i]]) {
-      answer[sentence[i]] = 1;
+    character = sentence[i];
+    if(!answer[character]) {
+      answer[character] = 1;
     } else {
-      answer[sentence[i]] += 1;
+      answer[character] += 1;
     }
   }
 
